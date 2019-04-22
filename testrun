@@ -9,13 +9,8 @@
 
 $(document).ready(function(){
     var ongaku = document.getElementById("symphonia");
-        ongaku.autoplay = true;
-        ongaku.load();
         bar = document.getElementById("gt-barwrap"),
-       
         track = document.getElementById("gt-musictrack"),
-        
-        
         ovset = $("#glenplayer04").offset(),
         hidari = ovset.left;
     
