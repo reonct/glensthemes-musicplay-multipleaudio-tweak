@@ -12,7 +12,10 @@ $(document).ready(function(){
         ongaku.autoplay = true;
         ongaku.load();
         bar = document.getElementById("gt-barwrap"),
+       
         track = document.getElementById("gt-musictrack"),
+        
+        
         ovset = $("#glenplayer04").offset(),
         hidari = ovset.left;
     
@@ -50,6 +53,61 @@ $(document).ready(function(){
     });
     
     ongaku.onended = function(){
+        //play next song
+    };
+});
+
+
+
+
+
+
+
+
+
+
+/*Audio 2*/
+$(document).ready(function(){
+    var oto = document.getElementById("equilibrium"),
+        bar = document.getElementById("gt-barwrap"),
+        track = document.getElementById("gt-musictrack"),
+        ovset = $("#glenplayer04").offset(),
+        hidari = ovset.left;
+    
+    $(".playy, .pausee").click(function(){
+        $(".playy, .pausee").toggle();
+        if (oto.paused) {
+            oto.play();
+        } else { 
+            oto.pause();
+        }
+    });
+    
+    oto.addEventListener("timeupdate", function(){
+        var now = parseFloat(oto.currentTime),
+            MP = "0" + Math.floor(now / 60),
+            SP = "0" + (Math.floor(now) - MP * 60),
+            _now = MP.substr(-2) + ":" + SP.substr(-2);
+        track.style.width = parseInt
+        (((oto.currentTime / oto.duration) * 100), 10) + "%";
+        document.getElementById("music-duration2").innerHTML = _now;
+    });
+    
+    bar.addEventListener("click", function(T_T){
+        var pin = (T_T.pageX - hidari - this.offsetLeft) / this.offsetWidth,
+            point = pin * oto.duration;
+        oto.currentTime = point;
+    });
+    
+    oto.addEventListener("durationchange", function(){
+        var origTimeA = document.getElementById("equilibrium").duration,
+            MO = "0" + Math.floor(origTimeA / 60), 
+            SO = "0" + (Math.floor(origTimeA) - MO * 60),
+            origTimeB = MO.substr(-2) + ":" + SO.substr(-2);
+        document.getElementById("music-duration2").innerHTML = origTimeB;
+    });
+    
+    oto.onended = function(){
         $(".playy").show();
         $(".pausee").hide();
     };
