@@ -1,0 +1,145 @@
+Paste the following between <head> and <style type="text/css">:
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<script src="//static.tumblr.com/gtjt4bo/m8Ypn96yc/glenplayer04.js"></script>
+
+
+<!-------MUSIC PLAYER BY GLENTHEMES------->
+
+Paste the following between <style type="text/css"> and </style>:
+
+/*-------MUSIC PLAYER BY GLENTHEMES-------*/
+#glenplayer04 {
+   position:fixed;
+   bottom:0;margin-bottom:25px;
+   left:0;margin-left:25px;
+   z-index:99;
+}
+#gt-player {
+   display:flex;
+   padding:15px;
+   background:#ffffff; /* main music player background color */
+   border-radius:3px 3px 0 0;
+}
+
+#gt-player > div {
+  align-self:center;
+  -webkit-align-self:center;
+}
+
+#music-controls {
+   user-select:none;
+   -webkit-user-select:none;
+   width:12px;
+   font-size:12px;
+   cursor:pointer;
+   color:#daa399; /* play & pause button color */
+}
+
+.pausee {display:none;}
+
+#gt-barwrap {
+   margin-left:15px;
+   padding:5px 0;
+   cursor:pointer;
+}
+
+#gt-musicbar {
+   min-width:100px;
+   height:2px;
+   background:#604c49; /* music bar color (not played) */
+   border-radius:4px;
+   display:flex;
+}
+
+#gt-musictrack {
+   height:inherit;
+   background:#daa399; /* music track color (played) */
+   border-radius:4px;
+   width:0;
+}
+
+#gt-blob {
+   align-self:center;
+   -webkit-align-self:center;
+   margin-left:-4px;
+   width:8px;
+   height:8px;
+   border-radius:100%;
+   background:#f0bfb6; /* music slider blob color */
+}
+
+#music-duration {
+   margin-left:15px;
+   font-family:calibri;
+   font-size:10px;
+   letter-spacing:0.5px;
+   color:#c09992; /* music time text color */
+}
+
+#music-duration2 {
+   margin-left:15px;
+   font-family:calibri;
+   font-size:10px;
+   letter-spacing:0.5px;
+   color:#c09992; /* music time text color */
+}
+
+#gt-songtext {
+   margin-top:0px;
+   padding:10px 15px;
+   background:#ffffff; /* song title background color */
+   border-radius:0 0 3px 3px;
+   font-family:calibri;
+   font-size:10px;
+   line-height:1em;
+   color:#daa399; /* song title color */
+   overflow:hidden;
+}
+
+#gt-songtext2 {
+   margin-top:0px;
+   padding:10px 15px;
+   background:#ffffff; /* song title background color */
+   border-radius:0 0 3px 3px;
+   font-family:calibri;
+   font-size:10px;
+   line-height:1em;
+   color:#daa399; /* song title color */
+   overflow:hidden;
+}
+
+Paste the following between <body> and </body>:
+
+<!-------MUSIC PLAYER BY GLENTHEMES------->
+<div id="glenplayer04">
+<div id="gt-player">
+   <div id="music-controls">
+       <div class="playy">►</div>
+       <div class="pausee">❚❚</div>
+   </div>
+   <div id="gt-barwrap">
+   <div id="gt-musicbar">
+   <div id="gt-musictrack"></div>
+   <div id="gt-blob"></div>
+   </div></div>
+
+   <div id="music-duration"></div>
+</div>
+
+<div id="gt-songtext">Time Palace</div>
+</div>
+
+<audio id="symphonia" src="https://dl.dropbox.com/s/7732js8zhptmqnx/Love%20Nikki%20%20Time%20Palace%20%20music.mp3" type="audio"></audio>
+   
+   <div id="music-duration2"></div>
+</div>
+
+<div id="gt-songtext2">Evernight's Dream</div>
+</div>
+
+<audio id="equilibrium" src="https://dl.dropbox.com/s/epzb00tvxdf81g4/Evernight%27sDream.mp3" type="audio"></audio>
+<!----end music player---->
+
+
+
