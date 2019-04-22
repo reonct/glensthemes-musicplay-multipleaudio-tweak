@@ -8,7 +8,7 @@
 // learning resource 03: developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
 
 $(document).ready(function(){
-    var ongaku = document.getElementById("symphonia");
+    var ongaku = document.getElementById("symphonia"),
         bar = document.getElementById("gt-barwrap"),
         track = document.getElementById("gt-musictrack"),
         ovset = $("#glenplayer04").offset(),
@@ -46,13 +46,31 @@ $(document).ready(function(){
             origTimeB = MO.substr(-2) + ":" + SO.substr(-2);
         document.getElementById("music-duration").innerHTML = origTimeB;
     });
-    
+       ongaku.addEventListener('ended', fucntion(){
+       
+    });
     ongaku.onended = function(){
         //play next song
     };
 });
 
 
+var forward = function(){
+  function increment(){
+  	 if (activeTrack < audios.length - 1)
+     		activeTrack++;
+     else activeTrack = 0;
+  }
+	if (musicTracker == 'playMusic') {
+  	 audios[activeTrack].pause();
+		 //audios[activeTrack].currentTime = 0;
+     increment();
+  	 audios[activeTrack].play();
+  } else {
+    increment();
+  }
+  showPlaying();
+};
 
 
 
