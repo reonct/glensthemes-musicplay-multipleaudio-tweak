@@ -96,7 +96,7 @@ Paste the following between <style type="text/css"> and </style>:
    color:#daa399; /* song title color */
    overflow:hidden;
 }
-
+/*forget this part its jus me being wack*/
 #gt-songtext2 {
    margin-top:0px;
    padding:10px 15px;
@@ -108,7 +108,7 @@ Paste the following between <style type="text/css"> and </style>:
    color:#daa399; /* song title color */
    overflow:hidden;
 }
-
+/*yee*/
 Paste the following between <body> and </body>:
 
 <!-------MUSIC PLAYER BY GLENTHEMES------->
@@ -131,7 +131,7 @@ Paste the following between <body> and </body>:
 </div>
 
 <audio id="symphonia" src="https://dl.dropbox.com/s/7732js8zhptmqnx/Love%20Nikki%20%20Time%20Palace%20%20music.mp3" type="audio"></audio>
-   
+   /*this too oops*/
    <div id="music-duration2"></div>
 </div>
 
